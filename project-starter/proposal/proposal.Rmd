@@ -7,10 +7,15 @@ output: html_document
 ```{r load-packages, message = FALSE}
 library(tidyverse)
 library(broom)
-library(tidytuesdayR)
 ```
 
 ## 1. Data
+
+```{r add data}
+lemurs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-08-24/lemur_data.csv')
+
+write_csv(lemurs, file = "../data/lemurs.csv")
+```
 
 ## 2. Exploratory Visualization
 
