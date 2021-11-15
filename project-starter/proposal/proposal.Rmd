@@ -20,3 +20,7 @@ write_csv(lemurs, file = "../data/lemurs.csv")
 ## 2. Exploratory Visualization
 
 ## 3. Possible question and method
+
+Since the data set is very comprehensive we could look at the correlations between lemur traits like age and litter size. We could further stratify the data by grouping these findings by species. 
+
+Some methods that will be good in process will be the groupby and summarize functions as well as the mean and median functions. There are a lot of observations in the data set, so constraining what we want to look at will be important. 
