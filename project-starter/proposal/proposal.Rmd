@@ -22,10 +22,6 @@ glimpse(lemurs)
 
 ## 2. Exploratory Visualization
 
-```{r view-data}
-glimpse(lemurs)
-```
-
 ```{r age-offspring}
 lemurs %>% 
   group_by(n_known_offspring, age_max_live_or_dead_y) %>% 
