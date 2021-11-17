@@ -12,7 +12,7 @@ library(dplyr)
 
 ## 1. Data
 
-```{r add data}
+```{r add-view-data}
 lemurs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-08-24/lemur_data.csv')
 
 write_csv(lemurs, file = "../data/lemurs.csv")

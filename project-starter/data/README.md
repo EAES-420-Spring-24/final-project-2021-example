@@ -7,6 +7,8 @@ using the following format.
 
 ## lemurs
 
+Rows: 82609 Columns: 54
+
 - `taxon`: Taxonomic code: in most cases, comprised of the first letter of the genus and the first three letters of the species; if taxonomic designation is a subspecies, comprised of the first letter of genus, species, and subspecies, and hybrids are indicated by the first three letters of the genus.
 - `dlc_id`: Specimen ID: Unique DLC number assigned at accession of animal
 - `hybrid`: Hybrid status: N=not a hybrid. S=species hybrid. B=subspecies hybrid. If sire is one of multiple possible and animal could be a hybrid, it is designated a hybrid.
