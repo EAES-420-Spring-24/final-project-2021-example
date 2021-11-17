@@ -7,6 +7,7 @@ output: html_document
 ```{r load-packages, message = FALSE}
 library(tidyverse)
 library(broom)
+library(dplyr)
 ```
 
 ## 1. Data
@@ -21,4 +22,28 @@ glimpse(lemurs)
 
 ## 2. Exploratory Visualization
 
+```{r view-data}
+glimpse(lemurs)
+```
+
+```{r age-offspring}
+lemurs %>% 
+  group_by(n_known_offspring, age_max_live_or_dead_y) %>% 
+  arrange(desc(n_known_offspring))
+```
+
+This will help see if there is a connection between age and birth count
+
+```{r graph-births}
+lemurs %>% 
+  ggplot(data = lemurs, mapping = aes(x = age_max_live_or_dead_y, )) +
+  geom_histogram()
+```
+
+This graphs helps see what age range would be the best to pull from to get the most observations which will help create more accurate graphs and tables.
+
 ## 3. Possible question and method
+
+Since the data set is very comprehensive we could look at the correlations between lemur traits like age and litter size. We could further stratify the data by grouping these findings by species. 
+
+Some methods that will be good in process will be the groupby and summarize functions as well as the mean and median functions. There are a lot of observations in the data set, so constraining what we want to look at will be important. 
