@@ -11,8 +11,10 @@ library(dplyr)
 ```
 
 ## 1. Data
+The lemur data we found comes from the Duke Lemur Center, and was cleaned by Jesse Mostipak. The Duke Lemur Center has around 200 individual lemurs across 14 species, and it the most diverse population of lemurs outside of Madagascar which makes it a very interesting dataset to look through. There is a total of 54 different variables in the dataset and a total of 82,609 rows-each being an individual lemur that is or was living at the Duke Lemur Center. As we know the data has been cleaned already, we can tell it is tidy and well organized.
 
 ```{r add-view-data}
+
 lemurs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-08-24/lemur_data.csv')
 
 write_csv(lemurs, file = "../data/lemurs.csv")
