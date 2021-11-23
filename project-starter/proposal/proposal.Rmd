@@ -1,6 +1,7 @@
 ---
 title: "Project proposal"
 author: "The Zoboomafoos"
+date: "`Sys.date()`"
 output: html_document
 ---
 
@@ -12,11 +13,9 @@ library(dplyr)
 
 ## 1. Data
 
-#### COMMENT: Great job loading in the data! Also, I think you made a great choice choosing a dataset that you know is already tidy. Tidying data can be pretty time-consuming, so you've really saved yourselves a lot of work here. With that, I have two comment: 
-##### 1. I'm not really sure why you wrote the lemurs dataset you imported back out as a csv file. Maybe for easier sharing?
-##### 2. You should have described what certain variables are, specifically, any variables that you might actually explore in your data. Otherwise I can't be sure what you are really looking for. 
+#### General comment: Great job reading and writing the data to the correct folder, and for describing all the variables in the data dictionary! I think you made a great choice choosing a dataset that you know is already tidy. Tidying data can be pretty time-consuming, so you've really saved yourselves a lot of work here. The challenge with this dataset will be it's size. One way to simplify the introduction to your dataset in your presentation and report will be to highlight a few interesting variables.
 
-The lemur data we found comes from the Duke Lemur Center, and was cleaned by Jesse Mostipak. The Duke Lemur Center has around 200 individual lemurs across 14 species, and it the most diverse population of lemurs outside of Madagascar which makes it a very interesting dataset to look through. There is a total of 54 different variables in the dataset and a total of 82,609 rows-each being an individual lemur that is or was living at the Duke Lemur Center. As we know the data has been cleaned already, we can tell it is tidy and well organized.
+The lemur data we found comes from the Duke Lemur Center, and was cleaned by Jesse Mostipak. The Duke Lemur Center has around 200 individual lemurs across 14 species, and it the most diverse population of lemurs outside of Madagascar which makes it a very interesting dataset to look through. There is a total of 54 different variables in the dataset and a total of 82,609 rows-each being an individual lemur that is or was living at the Duke Lemur Center. As we know the data has been cleaned already, we can tell it is tidy and well organized. 
 
 ```{r add-view-data}
 
@@ -29,7 +28,7 @@ glimpse(lemurs)
 
 ## 2. Exploratory Visualization
 
-#### COMMENT: This is a good start and I'm really happy that you got a usable graph from your data! With that, this is pretty underdeveloped and underexplained. I'm not really sure what the histogram is showing. Exploratory visualiations are a start, but here you should have gone a few steps further (e.g. made a ggplot of some characterstic with age, or more generally a plot that would set up the problem). 
+#### General comment: This is a good start and I'm really happy that you got a usable graph from your data! With that, this is pretty underdeveloped and underexplained. For your report, provide some text narrative to introduce your code chunk and visualization, then add some text afterwards to explain what you're seeing. For example,  I'm not really sure why you wanted to explore the connection between age and birth count and it's also hard to understand what the histogram is showing because you don't define how the variables. Also, although we only ask for an exploratory visualization, you can still refine the appearance and information content of the plot using labels (labs()) to provide titles, and better axis names, and themes (e.g., theme_bw(), or theme_classic()). 
 
 ```{r age-offspring}
 lemurs %>% 
@@ -49,12 +48,21 @@ This graphs helps see what age range would be the best to pull from to get the m
 
 ## 3. Possible question and method
 
-#### COMMENT: I'm glad you already know that constraining the data will be a pretty big challange. I would recommend making some more exploratory visualitzations in order to narrow your question to something fairly specific. This will also make the functions you want to use more obvious. 
+#### General comment: I'm glad you already know that focusing in on a subset of the data will be a  key challange. I would recommend making some more exploratory visualitzations in order to narrow your question to something fairly specific. This will also make the functions you want to use more obvious. You mention correlations, which is good, but you don't provide the functions or overall method for producing them. Please take a look at my suggested edits for illustration of how you could do this.
+
+Since the data set is very comprehensive we could look at the correlations between lemur traits like age and litter size. We might expect that litter size increases with age up to a certain point, after which it decreases. We could explore this correlation by mapping `lemur_age_variable` to the x-axis and `lemur_litter_size_variable` to the y-axis of a ggplot and using a `geom_point()` geometry to create a scatter plot. We could further stratify the data by grouping these findings by species and visualize these by mapping `species-variable` to the color or shape aesthetics.
+
+Some methods that will be good in process will be the `group_by()` and `summarize()` functions as well as the `mean()` and `median()` functions to calculate summary statistics. There are a lot of observations in the data set, so constraining what we want to look at will be important. 
 
 #### FINAL GRADE: 17/ 20
 
-#### FINAL COMMENT: In general you all did a good job of reading the data in and starting the process, and the code was all adequately terse (a good thing!). I took 1 point off for not explaining the variable you were plotting, 1 point for not really explaining the strengths or weaknesses of the plot you made, and 1 point for having the proposal being underdeveloped. Please take this as guidence more that a critique. Developing questions is a difficult task, but R can help make is a little easier...hopefully :-)  
+| Total                                | 18 pts |
+|--------------------------------------|--------|
+| Data                                 | 6/6 pts |
+| Proposal                             | 8/10 pts|
+| Workflow, organization, code quality | 2/2 pts |
+| Teamwork/cohesion                    | 2/2 pts |
 
-Since the data set is very comprehensive we could look at the correlations between lemur traits like age and litter size. We could further stratify the data by grouping these findings by species. 
+#### FINAL COMMENT: Great job reading/writing out the data to the correct directory, proving a comprehensive data dictionary, and starting the project. I deducted one point for not refining and not adequately describing and explaining your exploratory visualization, and one point for not being specific enough in the last section about the methods for your question (please see section 3 comment). The code was short and sweet, and you followed the prompt structure so you got full points there. Finally, all of your team members contributed commits to your repositories, so you received full points for teamwork. 
 
-Some methods that will be good in process will be the groupby and summarize functions as well as the mean and median functions. There are a lot of observations in the data set, so constraining what we want to look at will be important. 
+ 
