@@ -11,18 +11,25 @@ library(dplyr)
 ```
 
 ## 1. Data
+
+#### COMMENT: Great job loading in the data! Also, I think you made a great choice choosing a dataset that you know is already tidy. Tidying data can be pretty time-consuming, so you've really saved yourselves a lot of work here. With that, I have two comment: 
+##### 1. I'm not really sure why you wrote the lemurs dataset you imported back out as a csv file. Maybe for easier sharing?
+##### 2. You should have described what certain variables are, specifically, any variables that you might actually explore in your data. Otherwise I can't be sure what you are really looking for. 
+
 The lemur data we found comes from the Duke Lemur Center, and was cleaned by Jesse Mostipak. The Duke Lemur Center has around 200 individual lemurs across 14 species, and it the most diverse population of lemurs outside of Madagascar which makes it a very interesting dataset to look through. There is a total of 54 different variables in the dataset and a total of 82,609 rows-each being an individual lemur that is or was living at the Duke Lemur Center. As we know the data has been cleaned already, we can tell it is tidy and well organized.
 
 ```{r add-view-data}
 
 lemurs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-08-24/lemur_data.csv')
 
-write_csv(lemurs, file = "../data/lemurs.csv")
+#write_csv(lemurs, file = "../data/lemurs.csv")
 
 glimpse(lemurs)
 ```
 
 ## 2. Exploratory Visualization
+
+#### COMMENT: This is a good start and I'm really happy that you got a usable graph from your data! With that, this is pretty underdeveloped and underexplained. I'm not really sure what the histogram is showing. Exploratory visualiations are a start, but here you should have gone a few steps further (e.g. made a ggplot of some characterstic with age, or more generally a plot that would set up the problem). 
 
 ```{r age-offspring}
 lemurs %>% 
@@ -41,6 +48,12 @@ lemurs %>%
 This graphs helps see what age range would be the best to pull from to get the most observations which will help create more accurate graphs and tables.
 
 ## 3. Possible question and method
+
+#### COMMENT: I'm glad you already know that constraining the data will be a pretty big challange. I would recommend making some more exploratory visualitzations in order to narrow your question to something fairly specific. This will also make the functions you want to use more obvious. 
+
+#### FINAL GRADE: 17/ 20
+
+#### FINAL COMMENT: In general you all did a good job of reading the data in and starting the process, and the code was all adequately terse (a good thing!). I took 1 point off for not explaining the variable you were plotting, 1 point for not really explaining the strengths or weaknesses of the plot you made, and 1 point for having the proposal being underdeveloped. Please take this as guidence more that a critique. Developing questions is a difficult task, but R can help make is a little easier...hopefully :-)  
 
 Since the data set is very comprehensive we could look at the correlations between lemur traits like age and litter size. We could further stratify the data by grouping these findings by species. 
 
