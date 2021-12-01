@@ -138,13 +138,22 @@ or text in two columns $^*$
 ---
 
 # Code
-
-```{r boring-regression}
-# a boring regression
-model <- lm(dist ~ speed, data = cars)
-tidy(model)
-glance(model)
+.pull-left[
+```{r lemur-age-living, out.width = "200%", echo=FALSE, message=FALSE, warning=FALSE}
+lemurs_subset %>% 
+  ggplot(aes(x = age_of_living_y, color = sex)) + 
+  geom_histogram() + 
+  facet_wrap(~taxon)
 ```
+]
+.pull-right[
+```{r litter-size, out.width= "200%", echo=FALSE, message=FALSE, warning=FALSE}
+lemurs_subset %>% 
+  ggplot(aes(x = litter_size, color = taxon)) + 
+  geom_histogram() + 
+  facet_wrap(~taxon)
+```
+]
 
 ---
 
