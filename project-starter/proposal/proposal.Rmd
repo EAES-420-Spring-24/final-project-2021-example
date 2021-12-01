@@ -65,4 +65,15 @@ Some methods that will be good in process will be the `group_by()` and `summariz
 
 #### FINAL COMMENT: Great job reading/writing out the data to the correct directory, proving a comprehensive data dictionary, and starting the project. I deducted one point for not refining and not adequately describing and explaining your exploratory visualization, and one point for not being specific enough in the last section about the methods for your question (please see section 3 comment). The code was short and sweet, and you followed the prompt structure so you got full points there. Finally, all of your team members contributed commits to your repositories, so you received full points for teamwork. 
 
- 
+
+```{r birth-season}
+ggplot(lemurs, aes(x = birth_month, y = birth_type)) + 
+  geom_violin() + 
+  facet_wrap(~taxon)
+```
+
+```{r infant_death}
+ggplot(lemurs, aes(x = days_before_death, y = infant_lit_sz_if_preg)) + 
+  geom_point() + 
+  facet_wrap(~taxon)
+```

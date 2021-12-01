@@ -39,20 +39,50 @@ lemurs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tid
 # glimpse(lemurs)
 
 lemurs_subset <- lemurs %>% 
-  filter(taxon == c("MMUR", "PCOQ", "NCOU", "CMED", "LCAT"))
+  filter(taxon == c("MMUR", "PCOQ", "NCOU", "CMED", "LCAT")) %>% 
+  filter(birth_type == c("CB", "WB"))
 ```
 
-```{r include=FALSE}
+```{r, include=F}
 style_xaringan(
   title_slide_background_image = "img/confetti.jpg"
 )
 ```
 
-
 class: center, middle
 
-## A statement of the overall goal / research question
+## Meet the Lemurs
 
+---
+.pull-left[
+```{r PCOQ, echo = FALSE, out.width = "45%", fig.align = "center", fig.cap = "Coquerel’s Sifaka - PCOQ"}
+include_graphics("img/PCOQ.jpg")
+```
+]
+
+.pull-right[
+```{r MMUR, echo = FALSE, out.width = "75%", fig.align = "center", fig.cap = "Gray Mouse Lemur - MMUR"}
+include_graphics("img/MMUR.jpg")
+```
+]
+
+
+```{r NCOU, echo = FALSE, out.width = "40%", fig.align = "center", fig.cap = "Slow Loris - NCOU"}
+include_graphics("img/NCOU.jpg")
+```
+
+---
+.pull-left[
+```{r CMED, echo = FALSE, out.width = "100%", fig.align = "center", fig.cap = "Fat-Tailed Dwarf Lemur - CMED"}
+include_graphics("img/CMED.jpg")
+```
+]
+
+.pull-right[
+```{r LCAT, echo = FALSE, out.width = "100%", fig.align = "center", fig.cap = "Ring Tailed Lemur - LCAT"}
+include_graphics("img/LCAT.png")
+```
+]
 ---
 
 class: inverse, center, middle
