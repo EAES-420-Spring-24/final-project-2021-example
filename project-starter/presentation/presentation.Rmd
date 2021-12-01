@@ -1,6 +1,6 @@
 ---
-title: "Presentation title"
-subtitle: "Presentation subtitle (if any)"
+title: "The State of Lemurs"
+subtitle: "An exploration into 5 lemur species populations at The Duke Lemur Center"
 author: "The Zoboomafoos"
 institute: "University of Illinois at Chicago"
 date: "`r Sys.Date()`"
