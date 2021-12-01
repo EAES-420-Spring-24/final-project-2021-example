@@ -39,7 +39,8 @@ lemurs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tid
 # glimpse(lemurs)
 
 lemurs_subset <- lemurs %>% 
-  filter(taxon == c("MMUR", "PCOQ", "NCOU", "CMED", "LCAT"))
+  filter(taxon == c("MMUR", "PCOQ", "NCOU", "CMED", "LCAT")) %>% 
+  filter(birth_type == c("CB", "WB"))
 ```
 
 ```{r include=FALSE}
