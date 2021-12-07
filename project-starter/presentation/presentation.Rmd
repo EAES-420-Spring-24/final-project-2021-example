@@ -91,7 +91,7 @@ class: inverse, center, middle
 
 ---
 
-# Hello World
+# Methods
 
 - Click the `Knit` button to compile your presentation
 
