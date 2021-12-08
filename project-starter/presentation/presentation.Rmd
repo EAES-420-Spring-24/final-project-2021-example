@@ -150,9 +150,44 @@ lemurs_subset %>%
 
 ---
 
+<<<<<<< HEAD
 # Results and Conclusions 
 
 - Lemur populations have been largely grown in captivity due to deforestation and displacement
+=======
+class: inverse, center, middle
+
+# Conclusion
+
+---
+
+# Conclusion
+
+.pull-left[
+
+- We concentrated our data by focusing on 5 species of lemurs
+
+- (I really need to see the other slides before making a quick conclusion)
+
+- We did this
+
+- We did that
+
+- We did this some more
+
+]
+
+.pull-right[
+```{r lemur-fractal, echo = FALSE, out.width = "100%", fig.align = "center"}
+include_graphics("img/lemur-fractal.jpg")
+```
+]
+
+---
+
+
+# Feeling adventurous?
+>>>>>>> d61ad4075b91be40a92acb80756adb455c08a755
 
 --
 
