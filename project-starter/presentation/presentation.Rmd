@@ -45,7 +45,7 @@ lemurs_subset <- lemurs %>%
 
 ```{r, include=F}
 style_xaringan(
-  title_slide_background_image = "img/confetti.jpg"
+  title_slide_background_image = "img/duke-lemur-center-987.jpg"
 )
 ```
 
