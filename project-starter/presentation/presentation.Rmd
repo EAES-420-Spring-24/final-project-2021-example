@@ -1,6 +1,6 @@
 ---
-title: "Presentation title"
-subtitle: "Presentation subtitle (if any)"
+title: "The State of Lemurs"
+subtitle: "An exploration into 5 lemur species populations at The Duke Lemur Center"
 author: "The Zoboomafoos"
 institute: "University of Illinois at Chicago"
 date: "`r Sys.Date()`"
@@ -45,7 +45,7 @@ lemurs_subset <- lemurs %>%
 
 ```{r, include=F}
 style_xaringan(
-  title_slide_background_image = "img/confetti.jpg"
+  title_slide_background_image = "img/duke-lemur-center-987.jpg"
 )
 ```
 
