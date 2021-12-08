@@ -158,29 +158,29 @@ lemurs_subset %>%
 
 # Conclusion
 
+--
+
 .pull-left[
-
 - We concentrated our data by focusing on 5 species of lemurs
-
-- (I really need to see the other slides before making a quick conclusion)
-
-- We did this
-
-- We did that
-
-- We did this some more
-
 ]
+
+
+--
+
+.pull-left[
+- Lemur lifespans heavily depends on weight, sex does not play a major determining factor in lifespan
+]
+
+--
+
+.pull-left[
+- A higher litter size usually means a high lifespan as well. Also depends on weight because smaller lemur species who have a higher litter size will still have a relatively small lifespan. 
+]
+
+--
 
 .pull-right[
 ```{r lemur-fractal, echo = FALSE, out.width = "100%", fig.align = "center"}
 include_graphics("img/lemur-fractal.jpg")
 ```
 ]
-
-- Lemur lifespans heavily depends on weight, sex does not play a major determining factor in lifespan
-
---
-
-- A higher litter size usually means a high lifespan as well. Also depends on weight because smaller lemur species who have a higher litter size will still have a relatively small lifespan. 
-
