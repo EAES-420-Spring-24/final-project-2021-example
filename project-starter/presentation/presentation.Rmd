@@ -93,28 +93,6 @@ class: inverse, center, middle
 
 # Methods
 
-- Click the `Knit` button to compile your presentation
-
-- Make sure to commit and push all resulting files to your GitHub repo
-
----
-
-class: inverse, middle, center
-
-# Using xaringan
-
----
-
-# xaringan
-
-- The presentation is created using the `xaringan` package
-
-- Use `---` to separate slides and `--` for incremental builds
-
---
-
-- Like this
-
 ---
 
 # Methods
@@ -150,12 +128,15 @@ lemurs_subset %>%
 
 ---
 
-<<<<<<< HEAD
 # Results and Conclusions 
 
+.pull-left[
+
 - Lemur populations have been largely grown in captivity due to deforestation and displacement
-=======
-class: inverse, center, middle
+
+]
+
+---
 
 # Conclusion
 
@@ -183,16 +164,9 @@ include_graphics("img/lemur-fractal.jpg")
 ```
 ]
 
----
-
-
-# Feeling adventurous?
->>>>>>> d61ad4075b91be40a92acb80756adb455c08a755
-
---
-
 - Lemur lifespans heavily depends on weight, sex does not play a major determining factor in lifespan
 
 --
 
 - A higher litter size usually means a high lifespan as well. Also depends on weight because smaller lemur species who have a higher litter size will still have a relatively small lifespan. 
+
