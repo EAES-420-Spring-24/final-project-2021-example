@@ -111,19 +111,32 @@ lemurs %>%
 
 # Code
 .pull-left[
-```{r lemur-age-living, out.width = "200%", echo=FALSE, message=FALSE, warning=FALSE}
+```{r lemur-age-living, out.width = "100%", echo=FALSE, message=FALSE, warning=FALSE}
 lemurs_subset %>% 
   ggplot(aes(x = age_of_living_y, color = sex)) + 
   geom_histogram() + 
-  facet_wrap(~taxon)
+  facet_wrap(~taxon) +
+  labs(
+    title = "Age of Living Lemurs",
+    subtitle = "And a look at how smany of each sex there are currently", 
+    color = "Sex", 
+    x = "Age", 
+    y = "# of Lemurs")
 ```
 ]
 .pull-right[
-```{r litter-size, out.width= "200%", echo=FALSE, message=FALSE, warning=FALSE}
+```{r litter-size, out.width= "100%", echo=FALSE, message=FALSE, warning=FALSE}
 lemurs_subset %>% 
-  ggplot(aes(x = litter_size, y= weight_g, color = taxon)) + 
-  geom_point() + 
-  facet_wrap(~taxon)
+
+  ggplot(aes(x = litter_size, color = taxon)) + 
+  geom_histogram() + 
+  facet_wrap(~taxon) + 
+  labs(
+    title = "Litter Size of Lemurs", 
+    subtitle = "How many babies were in the litter a lemur came from", 
+    color = "Taxon", 
+    x = "# in Litter", 
+    y = "# of Lemurs")
 ```
 ]
 
