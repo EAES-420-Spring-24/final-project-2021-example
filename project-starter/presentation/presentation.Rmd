@@ -117,23 +117,16 @@ class: inverse, middle, center
 
 ---
 
-# Layouts
+# Methods
 
-You can use plain text
 
-- or bullet points
+```{r taxon-count, echo=FALSE}
+lemurs %>% 
+  ggplot(data = lemurs, mapping = aes(taxon, color = taxon)) +
+    geom_bar()
+```
 
-.pull-left[
-or text in two columns $^*$
-]
-.pull-right[
-- like
-- this
-]
 
-.footnote[
-[*] And add footnotes
-]
 
 ---
 
