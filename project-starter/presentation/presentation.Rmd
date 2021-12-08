@@ -109,7 +109,7 @@ lemurs %>%
 
 ---
 
-# Code
+# Visual Results
 .pull-left[
 ```{r lemur-age-living, out.width = "100%", echo=FALSE, message=FALSE, warning=FALSE}
 lemurs_subset %>% 
