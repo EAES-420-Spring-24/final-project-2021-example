@@ -1,6 +1,7 @@
 ---
 title: "The State of Lemurs"
 subtitle: "An exploration into 5 lemur species populations at The Duke Lemur Center"
+
 author: "The Zoboomafoos"
 institute: "University of Illinois at Chicago"
 date: "`r Sys.Date()`"
@@ -87,33 +88,11 @@ include_graphics("img/LCAT.png")
 
 class: inverse, center, middle
 
-# Section title
+# Data Wrangling 
 
 ---
 
 # Methods
-
-- Click the `Knit` button to compile your presentation
-
-- Make sure to commit and push all resulting files to your GitHub repo
-
----
-
-class: inverse, middle, center
-
-# Using xaringan
-
----
-
-# xaringan
-
-- The presentation is created using the `xaringan` package
-
-- Use `---` to separate slides and `--` for incremental builds
-
---
-
-- Like this
 
 ---
 
@@ -148,6 +127,7 @@ lemurs_subset %>%
 .pull-right[
 ```{r litter-size, out.width= "100%", echo=FALSE, message=FALSE, warning=FALSE}
 lemurs_subset %>% 
+
   ggplot(aes(x = litter_size, color = taxon)) + 
   geom_histogram() + 
   facet_wrap(~taxon) + 
@@ -162,7 +142,15 @@ lemurs_subset %>%
 
 ---
 
-class: inverse, center, middle
+# Results and Conclusions 
+
+.pull-left[
+
+- Lemur populations have been largely grown in captivity due to deforestation and displacement
+
+]
+
+---
 
 # Conclusion
 
@@ -190,16 +178,9 @@ include_graphics("img/lemur-fractal.jpg")
 ```
 ]
 
----
+- Lemur lifespans heavily depends on weight, sex does not play a major determining factor in lifespan
 
+--
 
-# Feeling adventurous?
+- A higher litter size usually means a high lifespan as well. Also depends on weight because smaller lemur species who have a higher litter size will still have a relatively small lifespan. 
 
-- Want to find out more about `xaringan`? See https://slides.yihui.name/xaringan/#1.
-
-- You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
-
-- But some of you might want to play around with slide styling. The 
-`xaringanthemer` provides some solutions for this that: https://pkg.garrickadenbuie.com/xaringanthemer.
-
-- And if you want more bells and whistles, there is also `xaringanExtra`: https://pkg.garrickadenbuie.com/xaringanExtra.
