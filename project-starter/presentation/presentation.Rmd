@@ -91,7 +91,7 @@ class: inverse, center, middle
 
 ---
 
-# Hello World
+# Methods
 
 - Click the `Knit` button to compile your presentation
 
@@ -149,6 +149,37 @@ lemurs_subset %>%
 ]
 
 ---
+
+class: inverse, center, middle
+
+# Conclusion
+
+---
+
+# Conclusion
+
+.pull-left[
+
+- We concentrated our data by focusing on 5 species of lemurs
+
+- (I really need to see the other slides before making a quick conclusion)
+
+- We did this
+
+- We did that
+
+- We did this some more
+
+]
+
+.pull-right[
+```{r lemur-fractal, echo = FALSE, out.width = "100%", fig.align = "center"}
+include_graphics("img/lemur-fractal.jpg")
+```
+]
+
+---
+
 
 # Feeling adventurous?
 
