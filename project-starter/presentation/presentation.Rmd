@@ -1,6 +1,6 @@
 ---
-title: "Presentation title"
-subtitle: "Presentation subtitle (if any)"
+title: "The State of the Lemurs"
+subtitle: "Lemur populations and the future for the genus"
 author: "The Zoboomafoos"
 institute: "University of Illinois at Chicago"
 date: "`r Sys.Date()`"
@@ -87,7 +87,7 @@ include_graphics("img/LCAT.png")
 
 class: inverse, center, middle
 
-# Section title
+# Data Wrangling 
 
 ---
 
@@ -142,21 +142,22 @@ lemurs_subset %>%
 .pull-right[
 ```{r litter-size, out.width= "200%", echo=FALSE, message=FALSE, warning=FALSE}
 lemurs_subset %>% 
-  ggplot(aes(x = litter_size, color = taxon)) + 
-  geom_histogram() + 
+  ggplot(aes(x = litter_size, y= weight_g, color = taxon)) + 
+  geom_point() + 
   facet_wrap(~taxon)
 ```
 ]
 
 ---
 
-# Feeling adventurous?
+# Results and Conclusions 
 
-- Want to find out more about `xaringan`? See https://slides.yihui.name/xaringan/#1.
+- Lemur populations have been largely grown in captivity due to deforestation and displacement
 
-- You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
+--
 
-- But some of you might want to play around with slide styling. The 
-`xaringanthemer` provides some solutions for this that: https://pkg.garrickadenbuie.com/xaringanthemer.
+- Lemur lifespans heavily depends on weight, sex does not play a major determining factor in lifespan
 
-- And if you want more bells and whistles, there is also `xaringanExtra`: https://pkg.garrickadenbuie.com/xaringanExtra.
+--
+
+- A higher litter size usually means a high lifespan as well. Also depends on weight because smaller lemur species who have a higher litter size will still have a relatively small lifespan. 
