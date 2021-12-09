@@ -1,6 +1,7 @@
 ---
-title: "Presentation title"
-subtitle: "Presentation subtitle (if any)"
+title: "The State of Lemurs"
+subtitle: "An exploration into 5 lemur species populations at The Duke Lemur Center"
+
 author: "The Zoboomafoos"
 institute: "University of Illinois at Chicago"
 date: "`r Sys.Date()`"
@@ -45,7 +46,7 @@ lemurs_subset <- lemurs %>%
 
 ```{r, include=F}
 style_xaringan(
-  title_slide_background_image = "img/confetti.jpg"
+  title_slide_background_image = "img/duke-lemur-center-987.jpg"
 )
 ```
 
@@ -87,33 +88,11 @@ include_graphics("img/LCAT.png")
 
 class: inverse, center, middle
 
-# Section title
+# Data Wrangling 
 
 ---
 
-# Hello World
-
-- Click the `Knit` button to compile your presentation
-
-- Make sure to commit and push all resulting files to your GitHub repo
-
----
-
-class: inverse, middle, center
-
-# Using xaringan
-
----
-
-# xaringan
-
-- The presentation is created using the `xaringan` package
-
-- Use `---` to separate slides and `--` for incremental builds
-
---
-
-- Like this
+# Methods
 
 ---
 
@@ -130,33 +109,88 @@ lemurs %>%
 
 ---
 
-# Code
+# Visual Results
 .pull-left[
-```{r lemur-age-living, out.width = "200%", echo=FALSE, message=FALSE, warning=FALSE}
+```{r lemur-age-living, out.width = "100%", echo=FALSE, message=FALSE, warning=FALSE}
 lemurs_subset %>% 
   ggplot(aes(x = age_of_living_y, color = sex)) + 
   geom_histogram() + 
-  facet_wrap(~taxon)
+  facet_wrap(~taxon) +
+  labs(
+    title = "Age of Living Lemurs",
+    subtitle = "And a look at how smany of each sex there are currently", 
+    color = "Sex", 
+    x = "Age", 
+    y = "# of Lemurs")
 ```
 ]
 .pull-right[
-```{r litter-size, out.width= "200%", echo=FALSE, message=FALSE, warning=FALSE}
+```{r litter-size, out.width= "100%", echo=FALSE, message=FALSE, warning=FALSE}
 lemurs_subset %>% 
+
   ggplot(aes(x = litter_size, color = taxon)) + 
   geom_histogram() + 
-  facet_wrap(~taxon)
+  facet_wrap(~taxon) + 
+  labs(
+    title = "Litter Size of Lemurs", 
+    subtitle = "How many babies were in the litter a lemur came from", 
+    color = "Taxon", 
+    x = "# in Litter", 
+    y = "# of Lemurs") + 
+  theme(legend.position = "none")
 ```
 ]
 
 ---
+# Visual Results
 
-# Feeling adventurous?
+```{r death-age-relationship, out.width= "80%", echo=FALSE, message=FALSE, warning=FALSE}
+lemurs_subset %>% 
+  ggplot(aes(y = age_at_death_y, x = dod, color = taxon)) + 
+  geom_point() + 
+  geom_smooth(method = lm) +
+  facet_wrap(~taxon) + 
+  labs(
+    title = "Date of Death vs Age at Death",
+    x = "Date of Death", 
+    y = "Age at Death") + 
+  theme(legend.position = "none")
 
-- Want to find out more about `xaringan`? See https://slides.yihui.name/xaringan/#1.
+```
 
-- You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
+---
 
-- But some of you might want to play around with slide styling. The 
-`xaringanthemer` provides some solutions for this that: https://pkg.garrickadenbuie.com/xaringanthemer.
+# Conclusion
 
-- And if you want more bells and whistles, there is also `xaringanExtra`: https://pkg.garrickadenbuie.com/xaringanExtra.
+--
+
+.pull-left[
+- Lemur populations have been largely grown in captivity due to deforestation and displacement
+]
+
+--
+
+.pull-right[
+- We concentrated our data by focusing on 5 key species of lemurs in our data set
+]
+
+--
+
+.pull-left[
+- Lemur lifespans heavily depends on weight, sex does not play a major determining factor in lifespan
+]
+
+--
+
+.pull-right[
+- A higher litter size usually means a high lifespan as well.
+- Lifespan also depends on weight because smaller lemur species who have a higher litter size will still have a relatively small lifespan. 
+]
+
+---
+
+
+```{r lemur-fractal, echo = FALSE, out.width = "100%", fig.align = "center"}
+include_graphics("img/lemur-fractal.jpg")
+```
+
