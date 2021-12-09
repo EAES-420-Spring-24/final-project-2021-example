@@ -94,10 +94,6 @@ class: inverse, center, middle
 
 # Methods
 
----
-
-# Methods
-
 
 ```{r taxon-count, echo=FALSE}
 lemurs %>% 
