@@ -160,28 +160,19 @@ lemurs_subset %>%
 
 ---
 
-# Results and Conclusions 
-
-.pull-left[
-
-- Lemur populations have been largely grown in captivity due to deforestation and displacement
-
-]
-
----
-
-# Conclusion
-
----
-
 # Conclusion
 
 --
 
 .pull-left[
-- We concentrated our data by focusing on 5 species of lemurs
+- Lemur populations have been largely grown in captivity due to deforestation and displacement
 ]
 
+--
+
+.pull-right[
+- We concentrated our data by focusing on 5 key species of lemurs in our data set
+]
 
 --
 
@@ -191,14 +182,15 @@ lemurs_subset %>%
 
 --
 
-.pull-left[
-- A higher litter size usually means a high lifespan as well. Also depends on weight because smaller lemur species who have a higher litter size will still have a relatively small lifespan. 
+.pull-right[
+- A higher litter size usually means a high lifespan as well.
+- Lifespan also depends on weight because smaller lemur species who have a higher litter size will still have a relatively small lifespan. 
 ]
 
---
+---
 
-.pull-right[
+
 ```{r lemur-fractal, echo = FALSE, out.width = "100%", fig.align = "center"}
 include_graphics("img/lemur-fractal.jpg")
 ```
-]
+
