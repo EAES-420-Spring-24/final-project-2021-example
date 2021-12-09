@@ -109,7 +109,7 @@ lemurs %>%
 
 ---
 
-# Code
+# Visual Results
 .pull-left[
 ```{r lemur-age-living, out.width = "100%", echo=FALSE, message=FALSE, warning=FALSE}
 lemurs_subset %>% 
@@ -136,9 +136,27 @@ lemurs_subset %>%
     subtitle = "How many babies were in the litter a lemur came from", 
     color = "Taxon", 
     x = "# in Litter", 
-    y = "# of Lemurs")
+    y = "# of Lemurs") + 
+  theme(legend.position = "none")
 ```
 ]
+
+---
+# Visual Results
+
+```{r death-age-relationship, out.width= "80%", echo=FALSE, message=FALSE, warning=FALSE}
+lemurs_subset %>% 
+  ggplot(aes(y = age_at_death_y, x = dod, color = taxon)) + 
+  geom_point() + 
+  geom_smooth(method = lm) +
+  facet_wrap(~taxon) + 
+  labs(
+    title = "Date of Death vs Age at Death",
+    x = "Date of Death", 
+    y = "Age at Death") + 
+  theme(legend.position = "none")
+
+```
 
 ---
 
