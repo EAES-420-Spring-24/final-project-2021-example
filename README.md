@@ -8,7 +8,7 @@ Introduction
 
 
 Methods
-
+The first step we did was cut down the data into a more manageable size. The raw data set includes 27 different lemur species and any graph made was hard to differentiate between each species. To decide which species to use, we created a bar graph that would display the count of observations in the data set for each species. We took the 4 species with the highest count which are LCAT,CMED,MMUR, and PCOQ. These species have the most observations in the data set meaning that we are able to create more accurate visuals. We also used NCOU which would appear an odd choice since when looking at the bar graph, NCOU is on the lower end when it comes to observations. NCOU was chosen to be used in our visuals due to an interesting relationship we found when creating visuals for NCOU. After cutting down the species being visualized to five, we created three visuals to help explore what factors have the greatest impact on lemur populations.
 
 
 
