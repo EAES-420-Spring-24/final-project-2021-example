@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Presentation title</title>
+    <title>The State of Lemurs</title>
     <meta charset="utf-8" />
     <meta name="author" content="The Zoboomafoos" />
-    <meta name="date" content="2021-12-01" />
+    <meta name="date" content="2021-12-09" />
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
@@ -12,14 +12,13 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Presentation title
-## Presentation subtitle (if any)
+# The State of Lemurs
+## An exploration into 5 lemur species populations at The Duke Lemur Center
 ### The Zoboomafoos
 ### University of Illinois at Chicago
-### 2021-12-01
+### 2021-12-09
 
 ---
-
 
 
 
@@ -32,103 +31,111 @@ class: center, middle, inverse, title-slide
 
 class: center, middle
 
-## A statement of the overall goal / research question
+## Meet the Lemurs
 
+---
+.pull-left[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/PCOQ.jpg" alt="Coquerel’s Sifaka - PCOQ" width="45%" /&gt;
+&lt;p class="caption"&gt;Coquerel’s Sifaka - PCOQ&lt;/p&gt;
+&lt;/div&gt;
+]
+
+.pull-right[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/MMUR.jpg" alt="Gray Mouse Lemur - MMUR" width="75%" /&gt;
+&lt;p class="caption"&gt;Gray Mouse Lemur - MMUR&lt;/p&gt;
+&lt;/div&gt;
+]
+
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/NCOU.jpg" alt="Slow Loris - NCOU" width="40%" /&gt;
+&lt;p class="caption"&gt;Slow Loris - NCOU&lt;/p&gt;
+&lt;/div&gt;
+
+---
+.pull-left[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/CMED.jpg" alt="Fat-Tailed Dwarf Lemur - CMED" width="100%" /&gt;
+&lt;p class="caption"&gt;Fat-Tailed Dwarf Lemur - CMED&lt;/p&gt;
+&lt;/div&gt;
+]
+
+.pull-right[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/LCAT.png" alt="Ring Tailed Lemur - LCAT" width="100%" /&gt;
+&lt;p class="caption"&gt;Ring Tailed Lemur - LCAT&lt;/p&gt;
+&lt;/div&gt;
+]
 ---
 
 class: inverse, center, middle
 
-# Section title
+# Data Wrangling 
 
 ---
 
-# Hello World
-
-- Click the `Knit` button to compile your presentation
-
-- Make sure to commit and push all resulting files to your GitHub repo
+# Methods
 
 ---
 
-class: inverse, middle, center
+# Methods
 
-# Using xaringan
+
+&lt;img src="presentation_files/figure-html/taxon-count-1.png" width="80%" /&gt;
+
+
 
 ---
 
-# xaringan
+# Visual Results
+.pull-left[
+&lt;img src="presentation_files/figure-html/lemur-age-living-1.png" width="100%" /&gt;
+]
+.pull-right[
+&lt;img src="presentation_files/figure-html/litter-size-1.png" width="100%" /&gt;
+]
 
-- The presentation is created using the `xaringan` package
+---
+# Visual Results
 
-- Use `---` to separate slides and `--` for incremental builds
+&lt;img src="presentation_files/figure-html/death-age-relationship-1.png" width="80%" /&gt;
+
+---
+
+# Conclusion
 
 --
 
-- Like this
+.pull-left[
+- Lemur populations have been largely grown in captivity due to deforestation and displacement
+]
 
----
+--
 
-# Layouts
+.pull-right[
+- We concentrated our data by focusing on 5 key species of lemurs in our data set
+]
 
-You can use plain text
-
-- or bullet points
+--
 
 .pull-left[
-or text in two columns `\(^*\)`
+- Lemur lifespans heavily depends on weight, sex does not play a major determining factor in lifespan
 ]
+
+--
+
 .pull-right[
-- like
-- this
-]
-
-.footnote[
-[*] And add footnotes
+- A higher litter size usually means a high lifespan as well.
+- Lifespan also depends on weight because smaller lemur species who have a higher litter size will still have a relatively small lifespan. 
 ]
 
 ---
 
-# Code
 
+&lt;img src="img/lemur-fractal.jpg" width="100%" style="display: block; margin: auto;" /&gt;
 
-```r
-# a boring regression
-model &lt;- lm(dist ~ speed, data = cars)
-tidy(model)
-```
-
-```
-## # A tibble: 2 × 5
-##   term        estimate std.error statistic  p.value
-##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-## 1 (Intercept)   -17.6      6.76      -2.60 1.23e- 2
-## 2 speed           3.93     0.416      9.46 1.49e-12
-```
-
-```r
-glance(model)
-```
-
-```
-## # A tibble: 1 × 12
-##   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
-##       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1     0.651         0.644  15.4      89.6 1.49e-12     1  -207.  419.  425.
-## # … with 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;
-```
-
----
-
-# Feeling adventurous?
-
-- Want to find out more about `xaringan`? See https://slides.yihui.name/xaringan/#1.
-
-- You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
-
-- But some of you might want to play around with slide styling. The 
-`xaringanthemer` provides some solutions for this that: https://pkg.garrickadenbuie.com/xaringanthemer.
-
-- And if you want more bells and whistles, there is also `xaringanExtra`: https://pkg.garrickadenbuie.com/xaringanExtra.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
