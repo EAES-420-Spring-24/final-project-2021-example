@@ -14,12 +14,14 @@ Methods
 
 
 Visual Results
+
 Visual Result 1
 
-
+We first wanted to look at how long the different lemur species we living in general. It varied a lot due to the size/weight of the lemurs. The longest living species were LCAT and PCOQ with both living up to 30 years. Next is CMED living up to 20 years, and MMUR living up to 10 years. NCOU only had around 15 to 20 data points for the the age_of_living variable, so even though they all were living around 20 years, it is not significant enough of data to make any strong conclusions. We also chose to color the bars according to sex, however the graphs shows there is not a strong correlation between age of living lemurs and sex. 
 
 Visual Result 2
 
+We then took a look at litter size since traditionally, a higher litter size correlates with a smaller lifespan since rearing a lot of offspring is an energetically taxing life event in ecology. The litter size also was slightly varied according to weight. The largest litter size was from CMED and MMUR since they had the capacity to have 4 offspring at a time. LCAT would have around 1-2 offspring per litter. NCOU and PCOQ both consistently would only have one child per litter. These graphs also varied a lot in just the amount of data points available for each species but they all had at least 150 observations. 
 
 
 Visual Result 3
