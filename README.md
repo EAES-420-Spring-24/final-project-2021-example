@@ -29,9 +29,5 @@ We wanted to take a look at how the lemurs were aging and how their lifespan is 
 
 Conclusion
 
-
-
-
-
-
-
+  Now let’s sum up and discuss conclusion we found. First, lemur populations have been largely grown in captivity due to deforestation and displacement. This was made evident by this sanctuary’s data. We concentrated this data by focusing on 5 key species of lemurs in our data set. We found that lemur lifespans heavily depend on weight, while sex does not play a major determining factor in lifespan. We also observed that a higher litter size usually means a high lifespan as well. And finally, we found that lifespan also depends more heavily on weight than on litter size as smaller lemur species who have a higher litter size will still have a relatively small lifespan.
+	These are important finding for the future of these lemur species. While the lemurs discussed here are not all the most endangered species of lemur, the data we recovered from them can be used to protect those species which are.
