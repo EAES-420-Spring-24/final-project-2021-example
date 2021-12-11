@@ -32,7 +32,7 @@ Conclusion
 
 ## Presentation
 
-Our presentation can be found [here](presentation/presentation.html).
+Our presentation can be found [here](https://2495316e7ffa4e879400664840e5151e.app.rstudio.cloud/file_show?path=%2Fcloud%2Fproject%2Fproject-starter%2Fpresentation%2Fpresentation.html#1).
 
 ## Data 
 
