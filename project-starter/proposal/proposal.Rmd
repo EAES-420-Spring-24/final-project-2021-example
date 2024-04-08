@@ -54,7 +54,7 @@ Since the data set is very comprehensive we could look at the correlations betwe
 
 Some methods that will be good in process will be the `group_by()` and `summarize()` functions as well as the `mean()` and `median()` functions to calculate summary statistics. There are a lot of observations in the data set, so constraining what we want to look at will be important. 
 
-#### FINAL GRADE: 17/ 20
+#### FINAL GRADE: 18/ 20
 
 | Total                                | 18 pts |
 |--------------------------------------|--------|
